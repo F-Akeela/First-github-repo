@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body{
+        background-color: black;
+    }
+
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    nav{
+        background-color: blanchedalmond;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section.link{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    section.link a:hover{
+        cursor: pointer;
+    }
+
+    section.link a{
+        text-decoration: none;
+        color: darkblue;
+        position: relative;
+
+    }
+
+    section.link a::after{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 0%;
+        transition: 0.3s ease;
+        background-color: darkblue;
+        left: 0;
+        bottom: -2px;
+    }
+
+    section.link a:hover a::after{
+        width: 100%;
+    }
+
+    img#hamburger{
+        display: none;
+    }
+
+    @media(min-width:200px){
+
+        section.link{
+            visibility: hidden;
+        }
+    }
+
+    @media(min-width:700px){
+
+        section.link{
+            visibility: visible;
+        }
+    }
+
+    @media(max-width:600px){
+
+        img#hamburger{
+            display: block;
+        }
+    }
+
+
+
+</style>
+
+</head>
+
+<body>
+    
+
+<nav>
+    <header>
+        <img src="https://www.svgrepo.com/show/42543/twitter.svg" alt="LOGO">
+    </header>
+
+    <section class="link">
+        <a href="#">Login</a>
+        <a href="#">Signup</a>
+        <a href="#">My profile</a>
+        <a href="#">About</a>
+    </section>
+
+    <img id="hamburger" src="https://www.svgrepo.com/show/316358/menu-hamburger.svg" alt="">
+
+</nav>
+
+
+
+</body>
+
+</html>
